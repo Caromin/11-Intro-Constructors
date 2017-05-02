@@ -1,5 +1,5 @@
 {
-  "name": "flashcard-generator",
+  "name": "11-Intro-Constructors",
   "version": "1.0.0",
   "description": "",
   "main": "apps.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Caromin/flashcard-generator.git"
+    "url": "git+https://github.com/Caromin/11-Intro-Constructors.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Caromin/flashcard-generator/issues"
+    "url": "https://github.com/Caromin/11-Intro-Constructors/issues"
   },
-  "homepage": "https://github.com/Caromin/flashcard-generator#readme",
+  "homepage": "https://github.com/Caromin/11-Intro-Constructors#readme",
   "dependencies": {
     "inquirer": "^3.0.6",
     "require": "^2.4.20"
