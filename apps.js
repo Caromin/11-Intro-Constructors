@@ -13,7 +13,8 @@ var incorrect = 0;
 //where to move the answer from the inquirer from to check its validity
 function BasicCard(name) {
 	this.name = name;
-	this.printAnswer = function() {console.log("Answer: " + this.name + "\n-------------------");}
+	this.printAnswer = function() {console.log(" Your Answer: " + this.name + '\n' + "\n-------------------");
+	}
 }
 
 //where they are asking the questions
@@ -22,22 +23,26 @@ function Inquire() {
 if ( i < questions.length){
 	inquirer.prompt([
 	{
+		//name prompt MUST be used in question type
+		// all of the questions, this is an question identifier
 		name: "name",
 		message: questions[i].front
 	}])
 
 	.then(function(answer) {
-//answer.name is based on the string given on name, not the actual property.		
+	//this means run this function with the string answer given in name
+	//answer.name is based on the string given on name, not the actual property.		
 	var user = new BasicCard(answer.name);
 //adds to the counter and moves the array question over one
 	if ((answer.name).toLowerCase() === (questions[i].back).toLowerCase() ) {
 		console.log("You are correct!");
-		correct++; }
-	else {console.log("Sorry, wrong answer!");
+		correct++; 
+	} else {console.log("Sorry, wrong answer!");
 		incorrect++; }
 	i++;
+	//for each 'loop' of the basicCard it will print the current info for the questions/answers
 	user.printAnswer();
-//makes the inquirer run again if the if statement is still true.		
+	//makes the inquirer run again if the if statement is still true.		
 	Inquire();
 	})
 }
